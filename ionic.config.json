@@ -1,0 +1,8 @@
+{
+  "name": "meld-score-calculator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "87d65d71"
+}
