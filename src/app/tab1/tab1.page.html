@@ -1,17 +1,76 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      MELD Score
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item class="color1">
+    <ion-text>
+      <p>Assess severity of end-stage liver disease in patients ≥12 years old, for transplant planning.</p>
+    </ion-text>
+  </ion-item>
+  <ion-card class ="color1">
+    <ion-card-content>
+      <ion-item class="color2">
+        <ion-radio-group [(ngModel)]="dialysis" > 
+            <ion-text>Dialysis at least twice in the past week?</ion-text>
+          <ion-item class="color2">
+            <ion-text>Yes</ion-text>
+            <ion-radio slot="start" value="q11"></ion-radio>
+          </ion-item>
+          <ion-item class="color2">
+            <ion-text>No</ion-text>
+            <ion-radio slot="start" value="q12"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
+      <p><i>Or CVVHD for ≥24 hours in the past week</i></p>
+      <ion-item class="color2">
+        <ion-label>Creatinine:</ion-label>
+        <ion-input [(ngModel)]="creatinine" type="number" placeholder="enter value"></ion-input>
+        <ion-select value="1"(ionChange)="checksatuan1($event)">
+          <ion-select-option value="1">mg/dL</ion-select-option>
+          <ion-select-option value="2">µmol/L</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-label>Bilirubin:</ion-label>
+        <ion-input [(ngModel)]="bilirubin" type="number" placeholder="enter value"></ion-input>
+        <ion-select value="1"(ionChange)="checksatuan2($event)">
+          <ion-select-option value="1">mg/dL</ion-select-option>
+          <ion-select-option value="2">µmol/L</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-label>INR:</ion-label>
+        <ion-input [(ngModel)]="inr" type="number" placeholder="enter value"></ion-input>
+      </ion-item>
+      <ion-item class="color2">
+        <ion-label>Sodium:</ion-label>
+        <ion-input [(ngModel)]="sodium" type="number" placeholder="in mEq/L"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="calculate()" class="color4">Calculate<ion-icon slot="end" name="checkmark-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" (click)="clear()" fill="outline" color="primary">Clear<ion-icon slot="end" name="close-circle-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-card class="color3">
+  <ion-card-content *ngIf="result1">
+    <div>
+      <p>{{result1}}</p>
+      <p>{{result2}}</p>
+    </div>
+  </ion-card-content>
+</ion-card>
 </ion-content>

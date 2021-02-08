@@ -1,17 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Information
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content [fullscreen]="true"> 
+  <ion-item class="color1">
+    <ion-label position="stacked">MELD score</ion-label>
+    <ion-text>
+      <p>1. MELD score was originally developed in 2001 by researchers at the Mayo Clinic</p>
+      <p>2. MELD score can be used to predict short term mortality risk in cirrhosis patients with complications such as variceal bleeding, spontaneous bacterial peritonitis, acute hepatic failure and alcoholic hepatitis</p>
+      <p>3. MELD score can also be used in preoperative assessment of cirrhotics undergoing non-transplant surgery and in HCC patients who are not candidates for transplant</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider></ion-item-divider>
+  <ion-item class="color1">
+    <ion-label position="stacked">PELD score</ion-label>
+    <ion-text>
+      <p>1. PELD score calculates the pediatric version of the MELD score for liver cirrhosis severity and transplant planning</p>
+      <p>2. It is proposed that PELD, along with its adult counter part, MELD, will be used to devise a new liver allocation system based on severity of chronic liver disease rather than waiting time</p>
+    </ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-text>
+      <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/11172350/">MELD score reference</a></p>
+      <p><a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/12151728/">PELD score reference</a></p>
+    </ion-text>
+  </ion-item>s
 </ion-content>
