@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "185323425975",
+    "project_id": "meld-score-calculator",
+    "storage_bucket": "meld-score-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185323425975:android:0a65566d2c1e0c0b017d32",
+        "android_client_info": {
+          "package_name": "com.imedicalapps.meldscoreforliverdisease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185323425975-0ptjbhqgvkfqc9jqf6gpuganpl9dvd6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtFihJAvoi1vjy00h_r1QThnCCzIlW07A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185323425975-0ptjbhqgvkfqc9jqf6gpuganpl9dvd6m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "185323425975-n3s6no447qbu7aq4dsskd451n3jnfh93.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.imedicalapps.meldscorecalculator"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
